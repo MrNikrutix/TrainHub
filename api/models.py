@@ -49,7 +49,6 @@ def create_exercise(db: Session, exercise: schemas.ExerciseCreate):
     
     # Create new exercise
     db_exercise = Exercise(
-        id=exercise.id,
         name=exercise.name,
         instructions=exercise.instructions,
         enrichment=exercise.enrichment,
