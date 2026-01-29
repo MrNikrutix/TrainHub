@@ -1,0 +1,78 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "fs:default",
+    "fs:allow-applocaldata-write",
+    "fs:allow-applocaldata-write-recursive",
+    "fs:allow-applocaldata-read",
+    "fs:allow-applocaldata-read-recursive",
+    "fs:allow-exists",
+    "fs:allow-mkdir",
+    "fs:allow-create",
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        "$VIDEO/**",
+        "$DESKTOP/**",
+        "$DOWNLOADS/**",
+        "$DOCUMENTS/**",
+        "$APP_LOCAL_DATA/**",
+        "**"
+      ]
+    },
+    "shell:allow-kill",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "llama-server",
+          "cmd": "",
+          "sidecar": true,
+          "args": true
+        }
+      ]
+    },
+    {
+      "identifier": "shell:allow-spawn",
+      "allow": [
+        {
+          "name": "llama-server",
+          "cmd": "",
+          "sidecar": true,
+          "args": true
+        }
+      ]
+    },
+    "http:default",
+    {
+      "identifier": "http:allow-fetch",
+      "allow": [
+        {
+          "url": "http://127.0.0.1:8080/*"
+        },
+        {
+          "url": "http://127.0.0.1:8081/*"
+        },
+        {
+          "url": "https://huggingface.co/**"
+        },
+        {
+          "url": "https://cdn-lfs.huggingface.co/**"
+        },
+        {
+          "url": "https://*.huggingface.co/**"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/**"
+        }
+      ]
+    }
+  ]
+}

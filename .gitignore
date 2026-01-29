@@ -1,0 +1,110 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+src-tauri/target
+# --- Frontend (Node.js) ---
+node_modules/
+dist/
+.DS_Store
+.env*
+npm-debug.log*
+yarn-error.log*
+
+# --- Backend (Rust) ---
+# To jest najważniejsze - folder target zawiera skompilowane pliki i jest ogromny!
+src-tauri/target/
+
+# --- Tauri Tooling ---
+src-tauri/dump.rdb
+src-tauri/*.app
+src-tauri/*.deb
+src-tauri/*.rpm
+src-tauri/*.msi
+src-tauri/*.exe
+
+# --- IDE (Opcjonalnie) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+# dependency directories
+node_modules/
+
+# Optional npm and yarn cache directory
+.npm/
+.yarn/
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+
+# .vscode workspace settings file
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# npm, yarn and bun lock files
+package-lock.json
+yarn.lock
+bun.lockb
+
+# rust compiled folders
+target/
+
+# test video for streaming example
+streaming_example_test_video.mp4
+
+# examples /gen directory
+/examples/**/src-tauri/gen/
+/bench/**/src-tauri/gen/
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# miscellaneous
+/.vs
+.DS_Store
+.Thumbs.db
+*.sublime*
+.idea
+debug.log
+TODO.md
+.aider*
+
+# Biblioteki DLL i pliki binarne w src-tauri
+src-tauri/*.dll
+src-tauri/*.lib
+src-tauri/*.pdb
